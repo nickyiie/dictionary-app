@@ -1,3 +1,4 @@
+
 function WordInfo () {
   return (
     <div className="info">
@@ -7,3 +8,5 @@ function WordInfo () {
     </div>
   )
 }
+
+export default WordInfo;
