@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import Form from '../Form/Form';
-import WordInfo from '../WordInfo/WordInfo';
-import SpeechButton from '../SpeechButton/SpeechButton'
+import Form from '../../component/Form/Form';
+import WordInfo from '../../component/WordInfo/WordInfo';
+import SpeechButton from '../../component/SpeechButton/SpeechButton'
 
 
 
@@ -19,8 +19,6 @@ class Main extends Component {
        search : word
    })
    }
-
-
 
    componentDidMount(){
        const searchWord = this.state.search;
@@ -40,7 +38,9 @@ class Main extends Component {
        })})
    }
 
-   conponentDidUpdate(){
+   conponentDidUpdate(prevProps){
+    const curProps = this.props.match.params;
+    console.log(curProps);
     const searchWord = this.state.search;
     axios({
         method: 'GET',

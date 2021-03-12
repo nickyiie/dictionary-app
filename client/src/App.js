@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import './App.css';
 import NavBar from './component/NavBar/NavBar';
-import Main from './component/Main/Main';
+import Main from './pages/Main/Main';
+import MyWords from './pages/MyWords/MyWords';
 
 
 
@@ -15,9 +16,9 @@ class App extends Component {
     <div className="app">
       <BrowserRouter>
         <Switch>
-          <Route path='/' exact component={Main}/>
-          {/* <Route path='/' component={}/>
-          <Route path='/'  component={}/>  */}
+          <Route path='/' exact render={(props) => <Main {...props}/> }/>
+          {/* <Route path='/recent' render={(routerProps) => <Main {...routerProps}/> }/> */}
+          <Route path='/mywords' component={MyWords}/> 
         </Switch>
         <NavBar/>
       </BrowserRouter>

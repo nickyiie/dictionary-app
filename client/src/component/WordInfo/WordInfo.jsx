@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import './WordInfo.scss'
+
 function WordInfo ({word, definition, partOfSpeech, synonyms}) {
   const synonymsList = synonyms.map (s => <li key={uuidv4()} className='info__synonym'>{s}</li>)
   return (

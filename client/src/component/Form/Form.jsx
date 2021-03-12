@@ -12,7 +12,6 @@ class Form extends Component {
       })
   }
   hanldeSubmit=(e)=>{
-    //   console.log(this.props.formData)
       e.preventDefault();
       this.props.formData(this.state.word);
       this.setState({
