@@ -7,7 +7,7 @@ function NavBar () {
   return (
     <div className="nav-bar">
       <NavLink className="nav-bar__link"><img className="nav-bar__recent" src={Recent} alt='search button'></img></NavLink>
-      <NavLink className="nav-bar__link"><img classNAme="nav-bar__search" src={Search} alt='liked button'/></NavLink>
+      <NavLink className="nav-bar__link"><img className="nav-bar__search" src={Search} alt='liked button'/></NavLink>
       <NavLink className="nav-bar__link"><img className="nav-bar__heart" src={Heart} alt='liked button'/></NavLink>
     </div>
   )
