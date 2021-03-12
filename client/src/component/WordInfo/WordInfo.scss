@@ -1,0 +1,35 @@
+@import '../../partials/typography';
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&display=swap');
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-family: 'RocknRoll One', sans-serif;
+
+    margin: 1.5rem 0 0 0;
+  }
+
+  &__type {
+    font-family: 'Tangerine', cursive;
+    font-size: 3rem;
+    margin: 0;
+    padding: none;
+  }
+
+  &__definition {
+    text-align: center;
+  }
+
+  &__synonyms {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__synonym {
+    margin-right: 2rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
