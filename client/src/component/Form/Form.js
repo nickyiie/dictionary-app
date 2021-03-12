@@ -12,6 +12,16 @@ class Form extends Component {
       this.setState({
           word: e.target.value
       })
+      
+  }
+
+  hanldeSubmit=(e)=>{
+    //   console.log(this.props.formData)
+      e.preventDefault();
+      this.props.formData(this.state.word);
+      this.setState({
+          word:''
+      })
   }
 
     render() {
