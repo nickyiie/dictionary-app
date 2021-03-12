@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from '../Form/Form';
+import WordInfo from '../WordInfo/WordInfo'
 
 class Main extends Component {
    state = {
@@ -11,7 +12,8 @@ class Main extends Component {
         return (
             <div>
                 <Form/>
-
+                <WordInfo/>
+                {/* <SpeechButton/> */}
             </div>
         );
     }
