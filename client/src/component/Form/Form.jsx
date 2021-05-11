@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Form.scss';
+import { NavLink } from 'react-router-dom';
 
 class Form extends Component {
   state = {
@@ -21,19 +22,19 @@ class Form extends Component {
     render() {
         return (
             <div>
-                 <form className='form' onSubmit = {this.hanldeSubmit} >
+                <form className='form' onSubmit={this.hanldeSubmit} >
                     <label>
-                        <input 
-                        className='form__search-bar'
-                        type = 'text' 
-                        name = 'word' 
-                        placeholder = 'Search the category' 
-                        value = { this.state.word}
-                        onChange = {this.handleChange}
+                        <input
+                            className='form__search-bar'
+                            type='text'
+                            name='word'
+                            placeholder='Search the category'
+                            value={this.state.word}
+                            onChange={this.handleChange}
                         />
                     </label>
-                    <button className='form__button'>Search</button>
-            </form>
+                    <NavLink to={`/${this.state.word}`} className='form__button'>Search</NavLink>
+                </form>
             </div>
         );
     }

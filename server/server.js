@@ -9,6 +9,7 @@ app.use(cors());
 
 let likedWords = [
   {
+    id: '1',
     word : 'discover',
     partOfSpeech: 'verb',
     definition: 'beyond belief or understanding',
@@ -33,6 +34,14 @@ app.post('/mywords', (req,res) => {
 
   res.json(likedWords);
 })
+
+// app.delete('/mywords/:id', (req, res) => {
+//   likedWords = likedWords.filter(word => {
+//     return word.id === req.params.id
+//   })
+
+//   res.json(likedWords);
+// })
 
 app.listen(port, () => console.log(`Listening on ${port}`));
 

@@ -9,21 +9,18 @@ import MyWords from './pages/MyWords/MyWords';
 
 
 class App extends Component {
-
-
   render() {
   return (
     <div className="app">
       <BrowserRouter>
         <Switch>
-          <Route path='/' exact render={(props) => <Main {...props}/> }/>
-          {/* <Route path='/recent' render={(routerProps) => <Main {...routerProps}/> }/> */}
-          <Route path='/mywords' component={MyWords}/> 
+          <Route path='/' exact component ={Main} />
+          <Route path='/mywords' exact component={MyWords}/> 
+          <Route path='/:word' component = {Main}/>
         </Switch>
         <NavBar/>
       </BrowserRouter>
     </div>
   );
 }}
-
 export default App;
